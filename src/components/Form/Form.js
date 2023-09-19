@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Form = ({ title, buttonText, text, path, link, children }) => {
   return (
+    <main className="auth">
     <form className="auth-form">
       <div className="auth-form__header">
         <Logo />
-        <h2 className="auth-form__title">{title}</h2>
+        <h1 className="auth-form__title">{title}</h1>
       </div>
       {children}
       <div className="auth-form__footer">
@@ -22,6 +23,7 @@ const Form = ({ title, buttonText, text, path, link, children }) => {
         </div>
       </div>
     </form>
+    </main>
   );
 };
 

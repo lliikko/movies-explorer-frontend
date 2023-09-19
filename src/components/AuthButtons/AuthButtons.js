@@ -3,14 +3,14 @@ import './AuthButtons.css';
 
 const AuthButtons = () => {
   return (
-    <div className="auth-buttons">
+    <nav className="auth-buttons">
       <Link className="auth-buttons__link auth-buttons__link_reg" to="/signup">
         Регистрация
       </Link>
       <Link className="auth-buttons__link auth-buttons__link_log" to="/signin">
         Войти
       </Link>
-    </div>
+    </nav>
   );
 };
 

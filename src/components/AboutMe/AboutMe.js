@@ -6,7 +6,7 @@ const AboutMe = () => {
     <section className="about-me">
       <h2 className="about-me__title">Студент</h2>
       <div className="about-me__container">
-        <address className="about-me__block">
+        <div className="about-me__block">
           <h3 className="about-me__name">Анжелика</h3>
           <p className="about-me__info">
             Фронтенд-разработчик, 23 года
@@ -21,11 +21,11 @@ const AboutMe = () => {
           >
             Github
           </a>
-        </address>
+        </div>
         <img
           className="about-me__avatar"
           src={avatar}
-          alt="Аватар"
+          alt="Фотография владельца сайта"
         />
       </div>
     </section>

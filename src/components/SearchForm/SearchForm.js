@@ -2,7 +2,7 @@ import './SearchForm.css';
 
 const SearchForm = () => {
   return (
-    <label className="search-form">
+    <div className="search-form">
       <input
         type="text"
         placeholder="Фильм"
@@ -14,7 +14,7 @@ const SearchForm = () => {
       <button className="search-form__search-btn" type="submit">
         Найти
       </button>
-    </label>
+    </div>
   );
 };
 

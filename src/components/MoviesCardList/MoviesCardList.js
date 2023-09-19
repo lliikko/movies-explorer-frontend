@@ -27,13 +27,13 @@ const MoviesCardList = ({ cards, mark }) => {
 
   return (
     <section className="movies-card-list">
-      <ul className="movies-card-list__list">
+      <div className="movies-card-list__list">
         {Array.isArray(visibleData)
           ? visibleData.map((item) => {
               return <MoviesCard key={item._id} card={item} mark={mark} />;
             })
           : null}
-      </ul>
+      </div>
       <ShowMore
         isVisible={cards.length > 16}
         isDisable={cards.length === visibleData.length}

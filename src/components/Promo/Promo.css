@@ -22,12 +22,13 @@
   margin: 0;
   font-weight: 400;
   font-size: 50px;
+  line-height: 58px;
   color: #fff;
 }
 
 .promo__info {
   width: 310px;
-  margin: 36px 0 0;
+  margin: 37px 0 0;
   font-weight: 400;
   font-size: 13px;
   color: #fff;
@@ -39,7 +40,7 @@
   align-items: center;
   justify-content: center;
   width: 129px;
-  margin: 146px 0 0;
+  margin: 147px 0 0;
   padding: 10px 0;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -73,9 +74,10 @@
     align-items: center;
   }
   .promo__title {
-    margin: 48px 0 22px;
+    margin: 46px 0 26px;
     font-size: 40px;
     text-align: center;
+    line-height: 50px;
   }
   .promo__info {
     text-align: center;
@@ -93,8 +95,10 @@
   }
   .promo__title {
     max-width: 300px;
-    margin: 44px 0 24px;
+    margin: 44px 0 26px;
     font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -1.2px;
   }
   .promo__logo {
     width: 210px;

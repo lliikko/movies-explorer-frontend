@@ -1,11 +1,11 @@
 .portfolio {
-  padding: 100px 10px 125px;
+  padding: 100px 10px 107px;
   margin: 0 auto;
   max-width: 1140px;
 }
 
 .portfolio__title {
-  margin: 0 0 50px;
+  margin: 0 0 30px;
   font-weight: 400;
   font-size: 18px;
   color: #a0a0a0;
@@ -36,6 +36,7 @@
 
 .portfolio__nav-link {
   font-weight: 400;
+  line-height: 50px;
   font-size: 30px;
   letter-spacing: -1.12px;
   width: 100%;
@@ -58,7 +59,7 @@
 
 @media screen and (max-width: 768px) {
   .portfolio {
-    padding: 90px 10px;
+    padding: 93px 10px;
     max-width: 668px;
   }
   .portfolio__nav-link {
@@ -74,7 +75,7 @@
     padding: 70px 10px;
   }
   .portfolio__title {
-    margin: 0 0 40px;
+    margin: 0 0 13px;
     font-size: 14px;
   }
   .portfolio__nav-link {
@@ -82,6 +83,12 @@
   }
   .portfolio__nav-icon {
     font-size: 18px;
+  }
+  .portfolio__nav-items {
+    padding-bottom: 0;
+    line-height: 28px;
+    font-size: 18px;
+    letter-spacing: -0.72px;
   }
 }
 

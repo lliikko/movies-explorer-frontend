@@ -4,8 +4,8 @@ const Register = ({ inputError, errorSpan }) => {
   return (
     <Form
       name="signup"
-      title="Добро пожловать!"
-      buttonText="Зарегитсрироваться"
+      title="Добро пожаловать!"
+      buttonText="Зарегистрироваться"
       text="Уже зарегистрированы?"
       link="Войти"
       path="/signin"
@@ -58,6 +58,8 @@ const Register = ({ inputError, errorSpan }) => {
           <input
             type="password"
             placeholder="Пароль"
+            minLength="5"
+            maxLength="30"
             className={`auth-form__input ${
               inputError ? `auth-form__input_error` : ''
             }`}

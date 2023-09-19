@@ -1,6 +1,6 @@
 .show-more {
   max-width: 1140px;
-  margin: 80px auto 80px;
+  margin: 60px auto 80px;
   display: flex;
   justify-content: center;
 }
@@ -37,5 +37,11 @@
 @media screen and (max-width: 831px) {
   .show-more {
     max-width: 708px;
+    margin: 71px auto 105px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .show-more__button {
+    max-width: 238px;
   }
 }

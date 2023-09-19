@@ -1,6 +1,6 @@
 .techs {
   background-color: #f5f5f5;
-  padding: 100px 10px;
+  padding: 98px 10px;
 }
 
 .techs__container {
@@ -17,15 +17,15 @@
   border-bottom: 1px solid #000;
 }
 
-.techs__subtitle {
-  margin: 90px 0 26px;
+.techs__text {
+  margin: 93px 0 26px;
   font-weight: 400;
   font-size: 50px;
   text-align: center;
   letter-spacing: -0.04em;
 }
 
-.techs__about {
+.techs__info {
   margin: 0 auto;
   max-width: 460px;
   width: 100%;
@@ -36,7 +36,7 @@
 }
 
 .techs__items {
-  margin: 100px auto 0;
+  margin: 105px auto 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -61,19 +61,19 @@
 
 @media screen and (max-width: 768px) {
   .techs {
-    padding: 90px 10px;
+    padding: 86px 10px;
   }
   .techs__container {
     max-width: 668px;
   }
-  .techs__subtitle {
-    margin: 80px 0 22px;
+  .techs__text {
+    margin: 80px 0 26px;
   }
-  .techs__about {
+  .techs__info {
     font-size: 12px;
   }
   .techs__items {
-    margin: 83px 0 0;
+    margin: 89px 0 0;
   }
   .techs__item {
     width: 84px;
@@ -84,7 +84,7 @@
 
 @media screen and (max-width: 425px) {
   .techs {
-    padding: 70px 10px;
+    padding: 60px 10px;
   }
 }
 
@@ -107,6 +107,8 @@
   .techs__info {
     max-width: 292px;
     font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.44px;
   }
   .techs__items {
     margin: 50px 0 0;

@@ -23,7 +23,8 @@ const Profile = ({ inputError, errorSpan }) => {
 
   return (
     <main className="profile">
-      <h2 className="profile__title">Привет, {name}</h2>
+      <section className="profile__section">
+      <h1 className="profile__title">Привет, {name}</h1>
       <fieldset className="profile__set-profile">
         <label className="profile__field">
           <span className="profile__input-title">Имя</span>
@@ -69,6 +70,7 @@ const Profile = ({ inputError, errorSpan }) => {
           Выйти из аккаунта
         </Link>
       </nav>
+      </section>
     </main>
   );
 };
