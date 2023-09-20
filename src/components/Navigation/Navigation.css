@@ -1,0 +1,14 @@
+.navigation {
+  width: 59.4%;
+}
+@media screen and (max-width: 831px){
+  .navigation {
+      width: 67%;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .navigation {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }

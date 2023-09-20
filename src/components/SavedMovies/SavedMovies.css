@@ -1,0 +1,41 @@
+.save-movies {
+  flex: 1 0 auto;
+  min-height: 100vh;
+  margin-bottom: 91px;
+}
+.save-movies__form {
+  margin-bottom: 114px;
+}
+.save-movies__set {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+}
+@media screen and (max-width: 768px){
+  .save-movies {
+    margin-bottom: 184px;
+  }
+  .save-movies__set {
+    padding: 0 30px 0;
+  }
+  .save-movies__form {
+    margin-bottom: 126px
+ }
+}
+@media screen and (max-width: 375px){
+  .save-movies {
+    margin-bottom: 186px;
+  }
+  .save-movies__set {
+    padding: 0 14px 0;
+  }
+  .save-movies__form {
+    margin-bottom: 86px
+ }
+}

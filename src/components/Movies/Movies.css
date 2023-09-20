@@ -1,0 +1,27 @@
+.movies {
+  flex: 1 0 auto;
+}
+.movies__form {
+  margin-bottom: 112px;
+}
+.movies__set {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px){
+  .movies__form {
+    margin-bottom: 126px;
+  }
+}
+@media screen and (max-width: 375px){
+  .movies__form {
+    margin-bottom: 86px;
+  }
+}

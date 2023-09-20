@@ -1,0 +1,47 @@
+.show-more {
+  max-width: 1140px;
+  margin: 60px auto 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.show-more__button {
+  padding: 0;
+  height: 36px;
+  width: 100%;
+  max-width: 320px;
+  cursor: pointer;
+  border: none;
+  background: #F9F9F9;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  transition: opacity 0.4s;
+}
+
+.show-more__button:hover {
+  opacity: 0.8;
+}
+
+.show-more__button_disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.show-more__button_disabled:hover {
+  opacity: 0.6;
+}
+
+
+@media screen and (max-width: 831px) {
+  .show-more {
+    max-width: 708px;
+    margin: 71px auto 105px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .show-more__button {
+    max-width: 238px;
+  }
+}
