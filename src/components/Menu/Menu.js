@@ -17,7 +17,7 @@ const Menu = ({ active, setActive }) => {
           <NavLink
             to="/movies"
             className="menu__link"
-            activeClassName="menu__link_active"
+            activeclassname="menu__link_active"
             onClick={() => setActive(false)}
           >
             Фильмы
@@ -25,7 +25,7 @@ const Menu = ({ active, setActive }) => {
           <NavLink
             to="/saved-movies"
             className="menu__link"
-            activeClassName="menu__link_active"
+            activeclassname="menu__link_active"
             onClick={() => setActive(false)}
           >
             Сохранённые фильмы
@@ -34,7 +34,7 @@ const Menu = ({ active, setActive }) => {
         <Link
           to="/profile"
           className="menu__profile"
-          onClick={() => setActive(false)}
+          onClick={() => setActive()}
         >
           Аккаунт
           <img className="menu__profile-icon" src={profileIcon} alt="Аккаунт" />

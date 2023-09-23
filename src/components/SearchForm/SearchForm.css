@@ -5,8 +5,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
-
+.search-form__form {
+  display: flex;
+  width: 100%;
+}
 .search-form__search-btn {
   margin: 0;
   padding: 0;
@@ -40,7 +44,11 @@
 .search-form__search-input::placeholder {
   color: #A0A0A0;
 }
-
+.search-form__error{
+  font-weight: 500;
+  font-size: 11px;
+  color: red;
+}
 @media screen and (max-width: 831px) {
   .search-form {
     max-width: 708px;
