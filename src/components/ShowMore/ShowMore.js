@@ -1,20 +1,19 @@
 import './ShowMore.css';
 
-const ShowMore = ({ setIndex, isVisible, isDisable }) => {
+const ShowMore = ({ setIndex, showMovies, showCards, filter }) => {
   return (
-    isVisible && (
-      <div className="show-more">
-        <button
-          className={`show-more__button ${
-            isDisable ? 'show-more__button_disabled' : ''
-          }`}
-          type="submit"
-          onClick={setIndex}
-        >
-          Ещё
-        </button>
-      </div>
-    )
+    <div className="show-more">
+      {showMovies.length >= showCards.total &&
+        showMovies.length < filter.length && (
+          <button
+            className="show-more__button"
+            type="submit"
+            onClick={setIndex}
+          >
+            Ещё
+          </button>
+        )}
+    </div>
   );
 };
 

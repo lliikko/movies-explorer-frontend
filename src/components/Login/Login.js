@@ -1,14 +1,30 @@
+import { useEffect } from 'react';
 import Form from '../Form/Form';
+import useValidation from '../../validation/useValidation';
 
-const Login = ({ inputError, errorSpan }) => {
+const Login = ({ handleLoginSubmit }) => {
+  const { values, handleChange, formReset, errors, isValid } =
+    useValidation();
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    handleLoginSubmit(values);
+  };
+
+  useEffect(() => {
+    formReset();
+  }, [formReset]);
+
   return (
     <Form
+     onSubmit={handleSubmit}
       name="signin"
       title="Рады видеть!"
       buttonText="Войти"
       text="Ещё не зарегистрированы?"
       link="Регистрация"
       path="/signup"
+      isValid={isValid}
     >
       <fieldset className="auth-form__set-auth">
         <label className="auth-form__field">
@@ -17,18 +33,18 @@ const Login = ({ inputError, errorSpan }) => {
             type="email"
             placeholder="E-mail"
             className={`auth-form__input ${
-              inputError ? `auth-form__input_error` : ''
+              errors.email ? `auth-form__input_error` : ''
             }`}
-            id="input-email"
             name="email"
+            value={values.email || ''}
+            onChange={handleChange}
             required
           />
-          <span
-            className={`auth-form__error ${
-              errorSpan ? `auth-form__error_active` : ''
-            } input-email-error`}
+          <span className={`auth-form__error ${
+              errors.email ? `auth-form__error_active` : ''
+            }`}
           >
-            Что-то пошло не так...
+            {errors.email}
           </span>
         </label>
         <label className="auth-form__field">
@@ -37,18 +53,19 @@ const Login = ({ inputError, errorSpan }) => {
             type="password"
             placeholder="Пароль"
             className={`auth-form__input ${
-              inputError ? `auth-form__input_error` : ''
+              errors.password ? `auth-form__input_error` : ''
             }`}
-            id="input-password"
             name="password"
+            value={values.password || ''}
+            onChange={handleChange}
             required
           />
           <span
             className={`auth-form__error ${
-              errorSpan ? `auth-form__error_active` : ''
-            } input-password-error`}
+              errors.password ? `auth-form__error_active` : ''
+            }`}
           >
-            Что-то пошло не так...
+            {errors.password}
           </span>
         </label>
       </fieldset>

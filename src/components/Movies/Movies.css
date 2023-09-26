@@ -8,6 +8,7 @@
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 10px 0;
+  margin-bottom: 118px;
   border: none;
   display: flex;
   flex-direction: column;
@@ -23,5 +24,8 @@
 @media screen and (max-width: 375px){
   .movies__form {
     margin-bottom: 86px;
+  }
+  .movies__set {
+    margin-bottom: 91px;
   }
 }

@@ -1,14 +1,33 @@
+import { useEffect } from 'react';
+import useValidation from '../../validation/useValidation';
+import { NAME_REGEXP } from "../../utils/constans";
 import Form from '../Form/Form';
 
-const Register = ({ inputError, errorSpan }) => {
+const Register = ({  handleRegisterSubmit, errorMessage, errorActive }) => {
+  const { values, handleChange, formReset, errors, isValid } =
+    useValidation();
+
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    handleRegisterSubmit(values);
+  };
+
+  useEffect(() => {
+    formReset();
+  }, [formReset]);
+
   return (
     <Form
+      onSubmit={handleSubmit}
       name="signup"
       title="Добро пожаловать!"
       buttonText="Зарегистрироваться"
       text="Уже зарегистрированы?"
       link="Войти"
       path="/signin"
+      isValid={isValid}
+      errorMessage={errorMessage}
+      errorActive={errorActive}
     >
       <fieldset className="auth-form__set-auth">
         <label className="auth-form__field">
@@ -17,20 +36,22 @@ const Register = ({ inputError, errorSpan }) => {
             type="text"
             placeholder="Имя"
             className={`auth-form__input ${
-              inputError ? `auth-form__input_error` : ''
+              errors.name ? `auth-form__input_error` : ''
             }`}
-            id="input-name"
             name="name"
+            value={values.name || ''}
+            onChange={handleChange}
             required
             minLength="2"
             maxLength="30"
+            pattern={NAME_REGEXP}
           />
           <span
             className={`auth-form__error ${
-              errorSpan ? `auth-form__error_active` : ''
-            } input-name-error`}
+              errors.name ? `auth-form__error_active` : 'auth-form__error_active'
+            }`}
           >
-            Что-то пошло не так...
+            {errors.name}
           </span>
         </label>
         <label className="auth-form__field">
@@ -39,18 +60,19 @@ const Register = ({ inputError, errorSpan }) => {
             type="email"
             placeholder="E-mail"
             className={`auth-form__input ${
-              inputError ? `auth-form__input_error` : ''
+              errors.email ? `auth-form__input_error` : ''
             }`}
-            id="input-email"
+            value={values.email || ''}
+            onChange={handleChange}
             name="email"
             required
           />
           <span
             className={`auth-form__error ${
-              errorSpan ? `auth-form__error_active` : ''
-            } input-email-error`}
+              errors.email ? `auth-form__error_active` : ''
+            }`}
           >
-            Что-то пошло не так...
+            {errors.email}
           </span>
         </label>
         <label className="auth-form__field">
@@ -58,21 +80,21 @@ const Register = ({ inputError, errorSpan }) => {
           <input
             type="password"
             placeholder="Пароль"
-            minLength="5"
-            maxLength="30"
             className={`auth-form__input ${
-              inputError ? `auth-form__input_error` : ''
+              errors.password ? `auth-form__input_error` : ''
             }`}
-            id="input-password"
+            value={values.password || ''}
+            onChange={handleChange}
             name="password"
+            minLength={8}
             required
           />
           <span
             className={`auth-form__error ${
-              !errorSpan ? `auth-form__error_active` : ''
-            } input-password-error`}
+              errors.password ? `auth-form__error_active` : ''
+            }`}
           >
-            Что-то пошло не так...
+            {errors.password}
           </span>
         </label>
       </fieldset>
