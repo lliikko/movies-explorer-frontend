@@ -12,7 +12,10 @@
   display: none;
   transform: opacity 0.4s;
 }
-
+.menu__main.active {
+  padding-bottom: 4px;
+  border-bottom: 2px solid #000;
+}
 .menu__main:hover {
   opacity: 0.7;
 }
@@ -35,7 +38,7 @@
   opacity: 0.7;
 }
 
-.menu__link_active {
+.menu__link.active {
   font-weight: 500;
 }
 
@@ -120,7 +123,7 @@
     font-weight: 500;
     font-size: 18px;
   }
-  .menu__link_active {
+  .menu__link.active {
     padding-bottom: 4px;
     border-bottom: 2px solid #000;
   }

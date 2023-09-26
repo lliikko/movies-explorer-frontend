@@ -73,12 +73,14 @@ const MoviesCardList = ({ displayMovies,
               />
             ))}
       </div>
+      {location.pathname === '/movies' && (
       <ShowMore
        setIndex={handleLoadMore}
        showMovies={showMovies}
        showCards={showCards}
        filter={filter}
       />
+      )}
     </section>
   );
 };

@@ -10,9 +10,12 @@ const Menu = ({ active, setActive }) => {
     >
       <span className="menu__overlay" />
       <div className="menu__content" onClick={(e) => e.stopPropagation()}>
-        <Link to="/" className="menu__main">
+        <NavLink to="/"
+        className="menu__main"
+        activeclassname="menu__link_active"
+        onClick={() => setActive()}>
           Главная
-        </Link>
+        </NavLink>
         <div className="menu__links">
           <NavLink
             to="/movies"

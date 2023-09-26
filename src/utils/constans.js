@@ -1,6 +1,7 @@
 export const URL = {
   beatfilmMovies: 'https://api.nomoreparties.co',
   localApi: 'https://api.angelikayang.nomoreparties.co',
+  //localApi: 'http://localhost:3001',
 };
 
 export const PAGE_COL = {

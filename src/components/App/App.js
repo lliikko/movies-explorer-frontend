@@ -95,6 +95,7 @@ const App = () => {
             localStorage.clear();
             setIsLogin(false);
             setisTried(false);
+            navigate("/", {replace:true})
           }
         });
       mainApi
@@ -105,7 +106,7 @@ const App = () => {
         })
         .finally(() => setPreloader(false))
         .catch((err) => console.log(err));
-    }, [navigate, isTried, isLogin]);
+    }, [isTried, isLogin]);
 
     const closeAllPopups = () => {
       setIsPopupOpen(false);
@@ -130,7 +131,7 @@ const App = () => {
 
     const handleLogin = () => {
       setIsLogin(true);
-      navigate('/movies');
+      navigate('/movies', {replace: true});
     };
     const handleLoginSubmit = (data) => {
       auth

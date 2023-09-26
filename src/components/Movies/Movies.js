@@ -28,6 +28,7 @@ const Movies = ({
   );
   const [isLoading, setIsLoading] = useState(false);
 
+
   const handleFindMovies = (movies, input) => {
     const moviesList = filterSearchMovie(movies, input);
 
@@ -117,6 +118,7 @@ const Movies = ({
     const getInput = localStorage.getItem('query-movies');
 
     if (localStorage.getItem('movies')) {
+      setAllMovies(getMovies);
       setFindMovies(filterSearchMovie(getMovies, getInput));
     }
   }, []);
